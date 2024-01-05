@@ -86,13 +86,11 @@ Here's a comprehensive set of questions for Flink developer interview, progressi
 
 18. **Describe a scenario where you implemented a sliding window operation in Flink for real-time analytics. What challenges did you face, and how did you address them?**
 
-    *Answer:* In a fraud detection system, we used sliding windows to analyze transaction patterns. Challenges included defining an appropriate window size and handling late-arriving events, which we addressed through parameter tuning and watermarking.
+    *Answer:* In a fraud detection system, we used sliding windows to analyze transaction patterns. Challenges included defining appropriate window size and handling late-arriving events, which we addressed through parameter tuning and watermarking.
 
 19. **Discuss the principles of stateful event-driven architectures and how they apply to Flink. Provide an example where you implemented such an architecture.**
 
-    *Answer:* Stateful event-driven architectures involve maintaining state across events for
-
- contextual processing. In a recommendation system, we used Flink to maintain user preferences as state, updating them in real-time based on user interactions.
+    *Answer:* Stateful event-driven architectures involve maintaining state across events for contextual processing. In a recommendation system, we used Flink to maintain user preferences as a state, updating them in real time based on user interactions.
 
 ### Advanced Flink Internals and Customization:
 
@@ -100,7 +98,7 @@ Here's a comprehensive set of questions for Flink developer interview, progressi
 
     *Answer:* Flink achieves exactly-once semantics through distributed snapshots taken by the checkpointing mechanism. During recovery, the system rolls back to the latest consistent state, ensuring that stateful operations are applied exactly once.
 
-21. **How does Flink handle dynamic scaling of a job? Discuss the challenges and strategies involved in dynamically adding or removing TaskManagers during runtime.**
+21. **How does Flink handle the dynamic scaling of a job? Discuss the challenges and strategies involved in dynamically adding or removing TaskManagers during runtime.**
 
     *Answer:* Flink supports dynamic scaling by redistributing tasks across available TaskManagers. Challenges include load balancing and state redistribution. Strategies involve coordinating TaskManager addition/removal and redistributing state intelligently.
 
