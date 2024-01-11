@@ -1,5 +1,3 @@
-Certainly! Here are the answers and explanations for the questions:
-
 ### Scala Questions:
 
 1. **Immutable Collections:**
